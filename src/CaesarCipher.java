@@ -8,6 +8,8 @@ public class CaesarCipher {
 
     private static final String ALPHABET = ALPHABET_PART_ONE + ALPHABET_PART_TWO;
 
+    public int maxSize = ALPHABET.length() / 2;
+
     public String encrypt(String message, int key) {
 
         StringBuilder result = new StringBuilder();
@@ -32,6 +34,7 @@ public class CaesarCipher {
         }
         return result.toString();
     }
+
     public String deEncrypt(String message, int key) {
         return encrypt(message, -1 * key);
     }
